@@ -4,9 +4,7 @@ jobs:
   build:
     docker:
       - image: circleci/openjdk:stretch
-        auth:
-          username: $DOCKERHUB_USERNAME
-          password: $DOCKERHUB_PASSWORD
+
     steps:
       - checkout
       - run: ./mvnw -Dmaven.test.skip=true clean package
